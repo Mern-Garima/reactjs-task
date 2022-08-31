@@ -1,0 +1,532 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Louis George Cafe';
+}
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('./fonts/louis-george-cafe-bold-italic.ttf');
+
+  /* src: url('/fonts/louis-george-cafe.eot') format('embedded-opentype'), */
+       /* url('/fonts/louis-george-cafe.woff2') format('woff2'),
+       url('/fonts/louis-george-cafe.woff') format('woff'),
+       url('/fonts/louis-george-cafe.ttf') format('truetype'),
+       url('/fonts/louis-george-cafe.svg#louis-george-cafe') format('svg'); */
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main_dashboard {
+  display: flex;
+  width: 100%;
+}
+.logo_main {
+  width: 72px;
+  height: 100vh;
+  background-image: linear-gradient(#0f2541, #000102);
+  position: relative;
+}
+.account_side {
+  width: calc(100% - 72px);
+  height: 100vh;
+    overflow: hidden;
+}
+img.logo, .assignment-nav {
+  width: 100%;
+  display: block;
+}
+.assign_img {
+  margin-top: 30px;
+}
+.left_bottom {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 23px;
+}
+.top_left {
+  margin: 12px 8px;
+}
+.ac_details {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  height: calc(100% - 59px);
+  background-color: #070f17;
+}
+.ac_details .tabs {
+  width: 470px;
+  padding: 0px;
+  list-style-type: none;
+  background-image: linear-gradient(181deg, #132940, #000000);
+}
+.tabs ul {
+  padding: 10px;
+  list-style: none;
+}
+.tabs ul li {
+  color: #F1F7F9;
+  padding: 10px;
+  background-color: rgb(9 21 38 / 11%);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 5px;
+}
+.tabs ul li.active {
+  background-color: #091526;
+}
+.account_user {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  background-image: linear-gradient(90deg, #112949, #000000, #0E233F);
+  padding: 16px 15px;
+  box-shadow: -1px 1px 6px #00000029;
+  justify-content: space-between;
+}
+.ac_heading h2 {
+  font-size: 32px;
+  line-height: 39px;
+  margin: 0;
+  color: #F1F7F9;
+}
+.pro_info {
+  /* background-color: #091526bf; */
+  width: calc(100% - 470px);
+}
+.under_pro_info h2 {
+  font-size: 20px;
+  line-height: 24px;
+  color: #F2F2F2;
+  margin: 0 0 20px;
+}
+.user_name_img img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-left: 10px;
+  border-radius:5px;
+}
+.ac_user .user_name_img {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 24px;
+  color: #F2F2F2;
+}
+.file-input__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+}
+.file_img, .original_img {
+  position: relative;
+    display: block;
+    width: 100%;
+    max-width: 238px;
+}
+.file_img span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #3CC3F2;
+  width: 37px;
+  height: 37px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+.file_img span img {
+  width: 100%;
+  display: block;
+  max-width: 21px;
+}
+form.form {
+  display: flex;
+}
+.buttons_form, .file-input {
+  width: 20%;
+}
+.form_fields {
+  width: 60%;
+}
+.form_fields label {
+  color: #9CBDEB;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+  display: block;
+}
+.under_pro_info {
+  padding: 20px;
+  background-color: rgb(9 21 38 / 75%);
+  border-radius: 10px;
+  margin: 20px;
+}
+.form_fields .form-group {
+  margin-bottom: 20px;
+  width: 50%;
+  float: left;
+}
+.form_fields .form-group > div {
+  padding: 0px 20px;
+}
+.form_inline {
+  display: flex;
+}
+.form_fields input {
+  border: 0.5px solid rgb(226 226 226 / 75%);
+  border-radius: 5px;
+  background-color: #112949;
+  height: 37px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  padding-left: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block;
+  padding-right: 0;
+  width: 100%;
+  font-family: 'Louis George Cafe';
+  box-sizing: border-box;
+}
+.form_inline select {
+  border: 0.5px solid rgb(226 226 226 / 75%);
+  border-radius: 5px;
+  background-color: #112949;
+  height: 37px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F1F7F9;
+  margin-right: 7px;
+  width: 90px;
+  font-family: 'Louis George Cafe';
+}
+.form_fields input::placeholder {
+  color: #F1F7F9;
+}
+input#email::placeholder, input#organization::placeholder {
+  color: #BBBBBB;
+}
+.form_inline input {
+  width: calc(100% - 97px);
+}
+.buttons_form button[type='submit'] {
+  border: 1px solid #58C8EF;
+  background-color: #3CC3F2;
+  width: 128px;
+  display: block;
+  height: 39px;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: #F1F7F9;
+}
+.buttons_form .cancel {
+  border: 1px solid #F1F7F9;
+  background-color: #F1F7F9;
+  width: 128px;
+  display: block;
+  height: 39px;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 8px;
+  color: #3CC3F2;
+}
+.buttons_form {
+  display: flex;
+  align-items: end;
+  align-content: end;
+  vertical-align: bottom;
+  justify-content: right;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.buttons_form button {
+  font-family: 'Louis George Cafe';
+}
+img.mobile_logo {
+  display: none;
+}
+.clearfix::after {
+  content: " "; 
+  display: block;
+  height: 0;
+  clear: both;
+}
+img.chevron-icon {
+  display: none;
+}
+
+h3.ac_title_m {
+  display: none;
+}
+
+
+
+@media(max-width:1600px){
+.ac_details .tabs {
+    width: 340px;
+}
+.pro_info {
+  width: calc(100% - 340px);
+}
+}
+
+@media(max-width:1439px){
+.ac_details .tabs {
+    width: 280px;
+}
+.pro_info {
+    width: calc(100% - 280px);
+}
+}
+
+@media(max-width:1439px){
+.ac_details .tabs {
+     width: 180px;
+}
+.pro_info {
+      width: calc(100% - 180px);
+}
+}
+
+@media(max-width:992px){
+img.mobile_logo {
+  display: block;
+}
+.ac_heading h2 {
+  display: none;
+}
+.ac_heading img {
+  width: 32px;
+  height: 30px;
+  object-fit: contain;
+}
+.top_left img.logo {
+  display: none;
+}
+.main_dashboard {
+  flex-direction: column-reverse;
+}
+.logo_main {
+  width: 100%;
+  height: 100%;
+}
+.left_bottom {
+  text-align: center;
+  position: relative;
+  padding-bottom: 0;
+}
+img.assignment-nav {
+  width: 23px;
+}
+.chat_icon {
+  width: 18px;
+  height: 18px;
+}
+.assign_img {
+  margin-top: 0;
+}
+.top_left {
+  margin: 0;
+}
+.left_detail {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-content: space-between;
+  padding: 10px 22px;
+}
+.account_side {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.ac_user .user_name_img {
+  font-size: 16px;
+  line-height: 19px;
+}
+.user_name_img img {
+  width: 32px;
+  height: 32px;
+}
+.account_user {
+  padding: 9px 15px;
+}
+.ac_details {
+  height: 100%;
+}
+.pro_info {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 50px;
+  width: 100%;
+  /* overflow: scroll; */
+}
+.ac_details .tabs {
+  width: 100%;
+}
+.tabs ul li, .tabs ul li.active {
+  background-color: rgb(241 247 249 / 11%);
+}
+.ac_title_m {
+  font-size: 24px;
+  line-height: 29px;
+  color: #F1F7F9;
+  margin: 5px 10px 13px;
+}
+.tabs ul {
+  margin-top: 0;
+  padding-top: 0;
+}
+.under_pro_info h2 {
+  font-size: 16px;
+  line-height: 19px;
+  color: #F2F2F2;
+  margin: 0;
+  background-image: linear-gradient(90deg, #0F2644, #102746);
+  padding: 10px;
+}
+.under_pro_info {
+  padding: 0;
+  background-image: linear-gradient(181deg, #000000, #112949);
+  border-radius: 0;
+  margin: 0;
+  height: auto;
+}
+form.form {
+  display: block;
+  background-color: rgb(241 247 249 / 25%);
+  margin: 10px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.buttons_form, .file-input, .form_fields {
+  width: 100%;
+}
+.form_fields .form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  float: none;
+}
+.file_img, .original_img {
+  max-width: 162px;
+  margin: 0 auto;
+}
+.form_fields {
+  padding-top: 20px;
+}
+.buttons_form > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+.buttons_form {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+.buttons_form button[type='submit'] {
+  margin-top: 0;
+}
+.form_fields .form-group > div {
+  padding: 0px 10px;
+}
+.buttons_form > div {
+  padding: 10px 10px 0;
+}
+.logo_main {
+  background-image: none;
+  position: relative;
+  background-color: #000000;
+  padding-top: 33px;
+  padding-bottom: 13px;
+}
+img.chevron-icon {
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+.pro_info.active {
+  display: block;
+}
+}
